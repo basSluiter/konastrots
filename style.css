@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
 
 }
 
@@ -16,7 +16,7 @@ body {
 
 /* fonts */
 .marck-script-regular {
-    font-family: "Marck Script", cursive;
+    font-family: "Marck Script", "cursive";
     font-weight: 400;
     font-style: normal;
     }
@@ -39,7 +39,8 @@ a {
 .nav-container a {
     color: black;
     transition: color 0.3s ease; /* Smooth color change */
-    font-size: 12px;
+    font-size: 1.06rem;
+    font-family: "Marck Script", "cursive";
 }
 
 .nav-container a:hover {
@@ -56,27 +57,19 @@ a {
     background-color: #C9AC8A;
 }
 
-.nav-wrapper  div  hr{
-    width: 80vw;
-    margin: auto;
-    margin-top: 20px;
-    max-width: 700px;
-
-
-}
-
 .nav-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 40px;
-    padding: 10px 0;
+    gap: 32px;
+
     flex-wrap: wrap; /* Allows wrapping of links on smaller screens */
     align-items: center;
 }
 
 .logo {
-    width: 100px;
+    width: 190px;
+    border-radius: 5%;
 
 }
 .nav-container > a {
@@ -103,11 +96,14 @@ a {
 }
 
 .img-container{
-    width: 300px;
-    height: 300px;
-    margin-bottom: 20px;
+    height: 100%;
     transition: 0.8s;
     box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.block  {
+    display: block;
 }
 .img-container:hover {
     transform: scale(1.05);
@@ -119,7 +115,12 @@ object-fit: cover;
 object-position: top;
 border-radius: 3%;
 }
-
+.imgCrop2{
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 3%;
+    }
 
 .header2 {
     text-align: center;
@@ -143,8 +144,9 @@ border-radius: 3%;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left; /* Default text alignment */
-    margin-left: 40px;
+    margin-left: 20px;
     margin-right: auto;
+    margin-bottom:  20px;
 }
 
 .img2 {
@@ -153,8 +155,8 @@ border-radius: 3%;
     object-fit: cover; /* Maintains aspect ratio while filling space */
 }
 .header3 {
-    margin: 20px 0;
-    font-size: 18px;
+    margin: 10px 0 20px;
+    font-size: 1.3rem;
 }
 
 /* Responsive layout for smaller screens */
@@ -163,6 +165,7 @@ border-radius: 3%;
     .nav-container {
         flex-direction: column;
         gap: 4px;
+        margin: 10px 0;
     }
 
     .section2-container {
@@ -184,8 +187,8 @@ border-radius: 3%;
         max-height: 300px; /* Adjusts image height for mobile */
     }
     .logo {
-        margin: 0 auto; /* Centers the logo */  
-        width: 50px;
+        margin: 0px auto; /* Centers the logo */  
+        display: none;
     }
     .btn {
         display: block;
@@ -278,48 +281,48 @@ footer {
 /* contact form */
 
 .label-container {
-    height: 100%;
+ height: auto;
 }
 #form {
-    width: 400px;
-    height: 600px;
+    width: 25rem;
+    height: 100%;
     background-color: #e0dddb;
     border: solid #9f9f9f 0.1px;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5=4px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
 }
 
 input {
-    padding: 5px;
-    margin: 0.5px;
-    width: 250px;
-    display: inline-block;
-    margin-left: 70px;
-    margin-right: 70px;
+    padding: 4px;
+    margin: 0.5px 0;
+    width: 15rem;
+    display: inline-block;;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 label {
     display: inline-block;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 2px;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 1px;
 }
 
 textarea {
-    width: 250px;
-    margin-left: 70px;
-    margin-right: 70px;
-    padding: 5px;
+    width: 15rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 4px;
 }
 .form-btn > button {
     width: 83px;
     height: 25px;
     background-color: #5b86fe;
     color: #ffffff;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 5rem;
+    margin-bottom: 1rem;
     border-radius: 3px;
     border: solid 0.1px #9f9f9f;
 }
