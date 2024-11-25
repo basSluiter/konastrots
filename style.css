@@ -402,7 +402,6 @@ button:hover {
     text-align: center;
     padding-top: 1rem;
     gap: 1rem
-    
 }
 .card h3{
     font-size: 2rem;
@@ -417,6 +416,9 @@ button:hover {
     background-color: #5b86fe;
     border-radius: 10px;
     border: 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
 }
 .button1 a button:hover{
     background-color: #5b86fecf;
@@ -430,15 +432,5 @@ button:hover {
 @media screen and (max-width: 768px) {
     .card{
         width: 20rem;
-        height: 30rem;
-        border-radius: 10px;
-        background-color: #e0dddb;
-        margin: 10% auto;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        text-align: center;
-        padding-top: 1rem;
-        gap: 1rem
     }
 }
