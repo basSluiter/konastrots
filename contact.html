@@ -8,16 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function(){
-        emailjs.init({
-            publicKey: "veZednJPJUsJ-lKGL",
-        });
-    })();
-    </script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -27,7 +17,7 @@
                     <a href="index.html">Welkom</a>
                     <a href="verhaal.html">Mijn Verhaal</a>
                     <a href="./hond.html">Onze Hond</a>
-                    <img src="./assets/logo.png" alt="logo" class="logo">
+                    <img src="./assets/logo2.png" alt="logo" class="logo">
                     <a href="ras.html">Het Ras</a>
                     <a href="fotos.html">Foto's</a>
                     <a href="contact.html">Contact</a>
@@ -49,10 +39,10 @@
             
             <section class="label-container">
                 <div class="form-label" id="form"> 
-                    <form>
+                    <form action="https://formsubmit.co/bassluiter12@hotmail.com" method="POST">   
                         <div class="form-fname">
                             <label for="fname">Naam*</label><br>
-                            <input type="text" id="fname" name="Firstname" placeholder="" required>
+                            <input type="text" id="name" name="Firstname" placeholder="" required>
                         </div>
                         <br>
                         <div>
@@ -62,12 +52,12 @@
                         <br>
                         <div>
                             <label for="land">Land*</label><br>
-                            <input type="text" id="land" name="land" required>    
+                            <input type="text" id="country" name="land" required>    
                         </div>
                         <br>
                         <div>
                             <label for="telefoonnummer">Telefoonnummer*</label><br>
-                            <input type="tel" id="telefoonnummer" name="telefoonnummer" required>
+                            <input type="tel" id="phone" name="telefoonnummer" required>
                         </div>
                         <br>
                         <div>
@@ -77,16 +67,19 @@
                         <br>
                         <div>
                             <label for="onderwerp">Onderwerp*</label><br>
-                            <input type="text" id="onderwerp" name="onderwerp" required> 
+                            <input type="text" id="subject" name="onderwerp" required> 
                         </div>
                         <br>
                         <div>
                             <label for="bericht">Bericht*</label><br>
-                            <textarea name="bericht" rows="7" cols="30" maxlength="250" minlength="15" id="bericht" required placeholder="Typ hier uw bericht"></textarea>
+                            <textarea name="bericht" rows="7" cols="30" maxlength="250" minlength="15" id="message" required placeholder="Typ hier uw bericht..."></textarea>
                         </div>
                         <br>
                         <div class="form-btn">
-                            <button  type="submit" onclick="sendMail()" name="verstuur" value="Verstuur">Verstuur</button>
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://konastrots.nl/bedankt.html">
+                            <input type="hidden" name="_template" value="box">
+                            <button  type="submit"  value="verzend">Verzend</button>
                         </div>
                     </form>
                 </div>

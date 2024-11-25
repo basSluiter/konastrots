@@ -389,3 +389,56 @@ button:hover {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* thank you page  */
+.card{
+    width: 30rem;
+    height: 30rem;
+    border-radius: 10px;
+    background-color: #e0dddb;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    padding-top: 1rem;
+    gap: 1rem
+    
+}
+.card h3{
+    font-size: 2rem;
+    padding: 30px;
+    font-family: "Marck Script", "cursive";
+}
+.button1 a button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10rem;
+    height: 2rem;
+    background-color: #5b86fe;
+    border-radius: 10px;
+    border: 0;
+}
+.button1 a button:hover{
+    background-color: #5b86fecf;
+}
+.none{
+    display: none;
+}
+.card-container{
+    height: 100vh;
+}
+@media screen and (max-width: 768px) {
+    .card{
+        width: 20rem;
+        height: 30rem;
+        border-radius: 10px;
+        background-color: #e0dddb;
+        margin: 10% auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        padding-top: 1rem;
+        gap: 1rem
+    }
+}
