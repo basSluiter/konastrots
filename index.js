@@ -1,28 +1,8 @@
-// JavaScript for Hamburger Menu
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+// hamburger menu on and off toggle
+const hamMenu = document.querySelector('.ham-menu');
+const offScreenMenu = document.querySelector('.off-screen-menu');
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('hidden');
-        navLinks.classList.toggle('active');
-    });
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active'); // Toggles the X animation
+    offScreenMenu.classList.toggle('active'); // Toggles the off-screen menu visibility
 });
-
-
-// const hamburger = document.querySelector('.hamburger');
-// const navLinks = document.querySelector('.nav-links');
-
-// hamburger.addEventListener('click', () => {
-//     const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-//     hamburger.setAttribute('aria-expanded', !expanded);
-//     navLinks.classList.toggle('hidden');
-// });
-
-// const hamburger = document.querySelector('.hamburger');
-// const navLinks = document.querySelector('.nav-links');
-
-// hamburger.addEventListener('click', () => {
-//     navLinks.classList.toggle('active');
-//     // Optionally toggle aria-expanded here
-// });
