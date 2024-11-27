@@ -284,54 +284,61 @@ footer {
  height: auto;
 }
 #form {
-    width: 25rem;
+    width: 20rem;
     height: 100%;
     background-color: #e0dddb;
     border: solid #9f9f9f 0.1px;
     border-radius: 5px;
-    padding: 5=4px;
+    padding: 0px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
 }
-
+.card-title h3 {
+    margin-left: 2.5rem;
+    font-family: "Marck Script", "cursive";
+    font-size: 1rem;
+    margin-top: 12px;
+}
 input {
     padding: 4px;
-    margin: 0.5px 0;
     width: 15rem;
     display: inline-block;;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-bottom: 6px;
 }
 label {
     display: inline-block;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
     margin-bottom: 1px;
 }
-
 textarea {
     width: 15rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
     padding: 4px;
 }
+
 .form-btn > button {
     width: 83px;
     height: 25px;
     background-color: #5b86fe;
     color: #ffffff;
-    margin-left: 5rem;
+    margin-top: 6px;
+    margin-left: 2.5rem;
     margin-bottom: 1rem;
     border-radius: 3px;
     border: solid 0.1px #9f9f9f;
 }
+
 button:hover {
     background-color: #5b86fecf;
 }
 
 .form-fname{
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .link {
     color: #5b86fe;
@@ -340,6 +347,12 @@ button:hover {
     font-size: 1.0rem;
 }
 
+@media screen and (max-width: 768px) {
+    .card-title h3 {
+        text-align: center;
+        margin-left: 0px;
+    }
+    }
 
 
 /* thank you page  */
@@ -390,6 +403,7 @@ button:hover {
 
 
 /* hamburger menu */
+/*
 .off-screen-menu{
     background-color: #C9AC8A;
     height: 100vh;
@@ -458,6 +472,7 @@ nav {
 }
 
 /* x when clicked */
+/*
 .ham-menu.active span:nth-child(1) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
@@ -468,6 +483,108 @@ nav {
 .ham-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+/* display 2 types of navbar depending on size */
+/*
+@media screen and (max-width: 768px) {
+    .nav-wrapper{
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .navbar1{
+        display: none;
+    }
+} */
+
+
+
+/* hamburger menu */
+.off-screen-menu{
+    background-color: #C9AC8A;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 80px;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+.off-screen-menu > ul > li {
+    text-decoration: none;
+    list-style: none;
+    padding: 8px;
+}
+.off-screen-menu > ul > li > a {
+    font-family: "Marck Script", "cursive";
+    font-size: 1.2rem;
+    width: 450px;
+ 
+}
+.off-screen-menu > ul > li:hover{
+    background-color: #e0dddb;
+    width: 450px;
+    transition: 0.3s ease-in-out;
+}
+.off-screen-menu.active {
+    right: 0;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    padding-right: 10px;
+    background-color: #C9AC8A;
+}
+
+.ham-menu {
+    height: 25px;
+    width: 25px;
+    margin-left: auto;
+    position: relative;
+}
+/* moved the logo 10 px -> right */
+nav > div > img {
+    margin-left: 10px;
+}
+.ham-menu span {
+    height: 2.5px;
+    width: 100%;
+    background-color: #e0dddb;
+    border-radius: 25px;
+    position: absolute;
+    top: 30%;
+    transition: .3s ease;
+}
+
+
+.ham-menu span:nth-child(1) {
+    transform: translateY(7px); /* Shift the first line up */
+}
+
+.ham-menu span:nth-child(3) {
+    transform: translateY(7px); /* Shift the third line down */
+}
+
+/* X when clicked */
+.ham-menu.active span:nth-child(1) {
+    transform: rotate(45deg); /* Rotate to form the first slash of the X */
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.ham-menu.active span:nth-child(3) {
+    transform: rotate(-45deg); /* Rotate to form the second slash of the X */
 }
 
 /* display 2 types of navbar depending on size */
