@@ -541,7 +541,7 @@ nav {
 nav {
     align-items: center;
     display: flex;
-    padding-right: 20px;
+    padding-right: 30px;
     background-color: #C9AC8A;
 }
 
@@ -551,9 +551,9 @@ nav {
     margin-left: auto;
     position: relative;
 }
-/* moved the logo 10 px -> right */
+/* moved the logo 20 px -> right */
 nav > div > a >img {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 .ham-menu span {
     height: 2.5px;
