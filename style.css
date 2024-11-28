@@ -548,3 +548,9 @@ nav {
 #img-5 {
     object-position: right;
 }
+@media screen and (max-width: 670px) {
+    .img-card:hover {
+        transform: scale(1);
+        z-index: 1;
+    }
+}
