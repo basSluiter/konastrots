@@ -1,20 +1,37 @@
+:root{
+    --main-color: #C9AC8A;
+    --secondairy-color: #e0dddb;
+    --third-color: #5b86fe;
+    --font-size: 0.95rem;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.2rem;
+    --font-size-heighlight: 1.1rem;
+    --line-height: 1.5;
+
+    --font-family:  "Marck Script", "cursive";
+    /* --main-color: #C9AC8A;
+    --secondairy-color: #e0dddb;
+    --third-color: #5b86fe; */
+}
 * {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
-    font-size: 0.95rem;
+    font-size: var(--font-size);
 }
 body {
     margin: 0;
     padding: 0;
-    background-color: #C9AC8A;
+    background-color: var(--main-color);
     height: 100vh;
+    line-height: var(--line-height);
 }
 /* fonts */
 .marck-script-regular {
-    font-family: "Marck Script", "cursive";
+    font-family: var(--font-family);
     font-weight: 400;
     font-style: normal;
     }
@@ -35,7 +52,7 @@ a {
     color: black;
     transition: color 0.3s ease; /* Smooth color change */
     font-size: 1.06rem;
-    font-family: "Marck Script", "cursive";
+    font-family: var(--font-family);
 }
 .nav-container a:hover {
     color: white;
@@ -46,7 +63,7 @@ a {
     margin: 0 auto; /* Center the content */
 }
 .nav-wrapper {
-    background-color: #C9AC8A;
+    background-color: var(--main-color);
 }
 .nav-container {
     display: flex;
@@ -68,8 +85,25 @@ a {
 .header1 {
     text-align: center;
     margin: 20px 0 10px;
-    font-size: 1.7rem;
-    color: #e0dddb;
+    color: var(--secondairy-color);
+}
+h1 {
+    font-size: var(--font-size-h1);
+}
+h2 {
+    font-size: var(--font-size-h2);
+}
+h3 {
+    font-size: var(--font-size-h3);
+}
+.h4 {
+    font-size: var(--font-size-h3);
+    font-weight: 300;
+}
+.text-heiglight {
+    font-size: var(--font-size-heighlight);
+    background-color: hsl(32, 29%, 61%);
+    font-style: italic;
 }
 .main-container {
     display: flex;
@@ -77,20 +111,20 @@ a {
     align-items: center;
     padding: 40px 20px;
     margin-bottom: 20px ;
-    background-color: #e0dddb;
+    background-color: var(--secondairy-color);
     height: 100%;
 }
 .img-container{
     height: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: inline-block;
 }
 .block  {
     display: block;
 }
 .imgCrop{
-height: 300px;
-width: 300px;
+width: 800px;
+height: 320px;
 object-fit: cover;
 object-position: top;
 border-radius: 3px;
@@ -105,7 +139,7 @@ border-radius: 3px;
     text-align: center;
     margin: 0;
     font-size: 1rem;
-    color: #e0dddb;
+    color: var(--secondairy-color);
 }
 .section2-container {
     display: flex;
@@ -128,18 +162,18 @@ border-radius: 3px;
 .img2 {
     width: 50%;
     max-height: 400px; /* Prevents distortion on larger screens */
+    
     object-fit: cover; /* Maintains aspect ratio while filling space */
 }
 .header3 {
     margin: 10px 0 20px;
-    font-size: 1.3rem;
 }
 .btn {
     height: 30px;
     width: 175px;
     border-radius: 5px;
     border: solid black 1px;
-    background-color: #e0dddb;;
+    background-color: var(--secondairy-color);
     cursor: pointer;
     transition: ease-in-out 0.5s;
 }
@@ -148,12 +182,12 @@ border-radius: 3px;
     color: black;
 }
 .btn:hover {
-    background-color: #C9AC8A;
+    background-color: var(--main-color);
     transform: scale(1.05);
 }
 
 /* Responsive layout for smaller screens */
-@media screen and (max-width: 768px) {
+@media (width <= 768px) {
 
     .nav-container {
         flex-direction: column;
@@ -164,8 +198,12 @@ border-radius: 3px;
         flex-direction: column;
         align-items: center;
     }
-    .img2, .text2 {
-        width: 100%;
+    
+    .imgCrop{
+        height: 500px;
+
+        object-fit: cover;
+        object-position: top;
         text-align: center; /* Center text for mobile */
     }
     .text-right-container {
@@ -176,8 +214,8 @@ border-radius: 3px;
         order: -1;
     }
     .img2 {
-        max-height: 300px; /* Adjusts image height for mobile */
-    }
+        max-height: 300px; /*Adjusts image height for mobile */
+     }
     .logo {
         margin: 0px auto; /* Centers the logo */  
         display: none;
@@ -192,14 +230,14 @@ border-radius: 3px;
         margin-top: 20px;
 
     }
-    .center{
+    .center, p{
         text-align: center;
         margin-left: auto;
         margin-right: auto;
     }
 } 
 footer {
-    background-color: #e0dddb;
+    background-color: var(--secondairy-color);
     padding: 20px;
     text-align: center;
     color: black;
@@ -241,7 +279,7 @@ footer {
 }
 .hover-footer *:hover{
     font-size: 0.85rem;
-    color: #5b86fe;
+    color: var(--third-color);
     transition: ease-in-out 0.9ms;
 }
 .sticky-footer {
@@ -268,8 +306,8 @@ footer {
 .card-title h3 {
     margin-left: 2.5rem;
     font-family: "Marck Script", "cursive";
-    font-size: 1rem;
     margin-top: 12px;
+    font-size: var(--font-size-h2);
 }
 input {
     padding: 4px;
@@ -294,7 +332,7 @@ textarea {
 .form-btn > button {
     width: 83px;
     height: 25px;
-    background-color: #5b86fe;
+    background-color: var(--third-color);
     color: #ffffff;
     margin-top: 6px;
     margin-left: 2.5rem;
@@ -304,14 +342,14 @@ textarea {
 }
 
 button:hover {
-    background-color: #5b86fecf;
+    background-color: var(--third-color);
 }
 
 .form-fname{
     margin-top: 15px;
 }
 .link {
-    color: #5b86fe;
+    color: var(--third-color);
 }
 .link:hover {
     font-size: 1.0rem;
@@ -319,14 +357,14 @@ button:hover {
 
 
 /* small size form */
-@media screen and (max-width: 768px) {
+@media (width <= 768px) {
     .card-title h3 {
         text-align: center;
         margin-left: 0px;
     }
 }
 /* larger size form*/
-@media screen and (min-width: 768px) {
+@media (width > 768px) {
     .label-container {
         height: auto;
        }
@@ -358,7 +396,7 @@ button:hover {
     width: 30rem;
     height: 30rem;
     border-radius: 10px;
-    background-color: #e0dddb;
+    background-color: var(--secondairy-color);
     margin: 10% auto;
     display: flex;
     flex-direction: column;
@@ -368,24 +406,24 @@ button:hover {
     gap: 1rem
 }
 .card h3{
-    font-size: 2rem;
+    font-size: var(--font-size-h3);
     padding: 30px;
-    font-family: "Marck Script", "cursive";
+    font-family: var(--font-family);
 }
 .button1 a button{
     margin-left: auto;
     margin-right: auto;
     width: 10rem;
     height: 2rem;
-    background-color: #5b86fe;
+    background-color: var(--third-color);
     border-radius: 10px;
     border: 0;
     text-decoration: none;
     list-style: none;
-    color: #e0dddb;
+    color: var(--secondairy-color);
 }
 .button1 a button:hover{
-    background-color: #5b86fecf;
+    background-color: var(--third-color)
 }
 .none{
     display: none;
@@ -393,7 +431,7 @@ button:hover {
 .card-container{
     height: 100vh;
 }
-@media screen and (max-width: 768px) {
+@media (width <= 768px) {
     .card{
         width: 20rem;
     }
@@ -401,7 +439,7 @@ button:hover {
 
 /* hamburger menu */
 .off-screen-menu{
-    background-color: #C9AC8A;
+    background-color: var(--main-color);
     height: 100vh;
     width: 100%;
     max-width: 450px;
@@ -428,7 +466,7 @@ button:hover {
     width: 450px;
 }
 .off-screen-menu > ul > li:hover{
-    background-color: #e0dddb;
+    background-color: var(--secondairy-color);
     width: 450px;
     transition: 0.3s ease-in-out;
 }
@@ -439,7 +477,7 @@ nav {
     align-items: center;
     display: flex;
     margin-right: 30px;
-    background-color: #C9AC8A;
+    background-color: var(--main-color);
 }
 .ham-menu {
     height: 25px;
@@ -454,7 +492,7 @@ nav {
 .ham-menu span {
     height: 2.5px;
     width: 100%;
-    background-color: #e0dddb;
+    background-color: var(--secondairy-color);
     border-radius: 25px;
     position: absolute;
     top: 30%;
@@ -477,12 +515,12 @@ nav {
     transform: rotate(-45deg); /* Rotate to form the second slash of the X */
 }
 /* display 2 types of navbar depending on size */
-@media screen and (max-width: 768px) {
+@media (width <= 768px) {
     .nav-wrapper{
         display: none;
     }
 }
-@media screen and (min-width: 768px) {
+@media (width > 768px) {
     .navbar1{
         display: none;
     }
@@ -529,7 +567,7 @@ nav {
 #img-5 {
     object-position: right;
 }
-@media screen and (max-width: 670px) {
+@media (width <= 670px) {
     .img-card:hover {
         transform: scale(1);
         z-index: 1;
