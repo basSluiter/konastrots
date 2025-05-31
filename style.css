@@ -2,6 +2,8 @@
     --main-color: #C9AC8A;
     --secondairy-color: #e0dddb;
     --third-color: #5b86fe;
+    --text-shadow: rgb(231, 172, 138);
+    --fourth-color:  #c9ac8a51;
     --font-size: 0.95rem;
     --font-size-h1: 2rem;
     --font-size-h2: 1.5rem;
@@ -146,9 +148,10 @@ border-radius: 3px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     align-items: flex-start;
 }
+
 .text-right-container {
     display: flex;
     flex-direction: column;
@@ -238,7 +241,95 @@ border-radius: 3px;
     .ras div p {
         text-align: left;
     }
-} 
+}
+
+/* 3rde sectie tbv aankoniging puppys */
+
+.section3-container{
+    background-color: var(--secondairy-color);
+    height: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.section3-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    background-color: var(--fourth-color);
+    border-radius: 5px;
+}
+
+.item-1{
+grid-column-start: 1;
+grid-column-end: 2;
+display: flex;
+flex-direction: column;
+padding: 2rem 3rem
+}
+.item-2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 1rem;
+}
+.item-3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    padding: 1rem;
+}
+.section3-card img{
+    border-radius: 3px;
+}
+.dog-name{
+    font-family: var(--font-family);
+    font-size: var(--font-size-h3);
+}
+.dog-name:hover{
+text-shadow: var(--third-color) 2px 2px;
+}
+.item-1 h2{
+    text-shadow: rgb(231, 172, 138) 2px 2px;
+}
+.highlight{
+    border-bottom: 3px solid var(--text-shadow);
+}
+.text-highlight{
+    font-size: var(--font-size-heighlight);
+    font-weight: bold;
+    color: var(--third-color);
+}
+
+@media (width <= 768px) {
+    .section3-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .5fr 1fr;
+    }
+    .item-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        }
+        .item-2{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            padding: 1rem .5rem 1rem 1rem;
+            text-align: center;
+        }
+        .item-3{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            padding: 1rem 1rem .5rem 1rem;
+            text-align: center;
+        }
+}
+
 footer {
     background-color: var(--secondairy-color);
     padding: 20px;
