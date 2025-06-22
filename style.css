@@ -243,6 +243,48 @@ border-radius: 3px;
     }
 }
 
+/* socials bar */
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.socials-icons {
+    width: 28px;
+}
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+  }
+  
+  /* Style the icon bar links */
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Style the social media icons with color, if you want */
+  .icon-bar a:hover {
+    background-color: var(--third-color);
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .instagram {
+    background:#DF436C;
+    color: white;
+  }
+  .tiktok {
+    background: black;
+    color: white;
+  }
+
+
 /* 3rde sectie tbv aankoniging puppys */
 
 .section3-container{
@@ -290,13 +332,24 @@ text-shadow: var(--third-color) 2px 2px;
 .item-1 h2{
     text-shadow: rgb(231, 172, 138) 2px 2px;
 }
+.text-shadow-red {
+    text-shadow: rgb(231, 172, 138) 2px 2px;
+}
+.text-shadow-blue {
+    text-shadow: var(--third-color) 2px 2px;
+}
 .highlight{
     border-bottom: 3px solid var(--text-shadow);
 }
 .text-highlight{
     font-size: var(--font-size-heighlight);
     font-weight: bold;
-    color: var(--third-color);
+    /* color: var(--third-color); */
+}
+.text-highlight-2{
+    font-size: var(--font-size-heighlight);
+    font-weight: bold;
+    /* color: rgb(231, 172, 138); */
 }
 
 @media (width <= 768px) {
